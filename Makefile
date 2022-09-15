@@ -1,5 +1,5 @@
 app: main.c fifo.c
-	gcc $^ -I./ -o $@
+	gcc -fsanitize=address $^ -I./ -o $@
 
 .PHONY:clean
 
